@@ -8,4 +8,6 @@ RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available
 
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
+RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+
 EXPOSE 80
