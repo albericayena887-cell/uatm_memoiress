@@ -1,0 +1,168 @@
+:root {
+    --uatm-blue: #121212;
+    --uatm-blue-light: #b08d57;
+    --uatm-gray: #f7f5ef;
+    --uatm-gray-dark: #ece7db;
+}
+
+body {
+    background-color: var(--uatm-gray);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.bg-uatm { background-color: var(--uatm-blue) !important; }
+.text-uatm { color: var(--uatm-blue) !important; }
+.bg-uatm-light { background-color: var(--uatm-gray-dark) !important; }
+
+.btn-uatm {
+    background-color: var(--uatm-blue);
+    border-color: var(--uatm-blue);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.btn-uatm:hover, .btn-uatm:focus {
+    background-color: var(--uatm-blue-light);
+    border-color: var(--uatm-blue-light);
+    color: #111;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(176, 141, 87, 0.45);
+}
+
+.btn-outline-uatm {
+    color: var(--uatm-blue);
+    border-color: var(--uatm-blue);
+}
+.btn-outline-uatm:hover {
+    background-color: var(--uatm-blue);
+    color: #f8f5ef;
+}
+
+.hero-uatm {
+    background: linear-gradient(135deg, #111111 0%, #2a2a2a 70%, #b08d57 100%);
+    padding: 3rem 2rem;
+}
+
+.footer-uatm {
+    background-color: var(--uatm-blue);
+    color: rgba(248, 245, 239, 0.92);
+}
+
+.navbar,
+.table-uatm,
+.btn-uatm {
+    letter-spacing: 0.2px;
+}
+
+.stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--uatm-blue);
+}
+
+.memoire-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.memoire-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;
+}
+
+.table-uatm {
+    background-color: var(--uatm-blue);
+    color: #fff;
+}
+.table-uatm th {
+    font-weight: 500;
+    border: none;
+}
+
+/* Sécurité visuelle : si AOS est présent mais son JS ne démarre pas,
+   les éléments data-aos restent en opacity:0 (invisibles). On force
+   l'affichage pour les lignes de tableaux (admin, listes). */
+.table [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.auth-body {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1f1f1f 65%, #9c7a47 100%);
+    min-height: 100vh;
+}
+
+.auth-card {
+    border-radius: 1rem;
+}
+
+.pdf-viewer-container {
+    position: relative;
+    background: #333;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 70vh;
+    border: none;
+    display: block;
+}
+
+.cover-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.cover-placeholder {
+    height: 200px;
+    background: var(--uatm-gray-dark);
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.brand-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-logo-md {
+    height: 72px;
+}
+
+.brand-logo-lg {
+    height: 140px;
+    max-width: 100%;
+}
+
+.brand-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.brand-block-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .pdf-viewer { height: 50vh; }
+    .hero-uatm { padding: 2rem 1.5rem; }
+}
